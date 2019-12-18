@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCpQobrd3VK5f-Z-e9CNtIqc_bcIy6TLmw",
+      authDomain: "dtproject-d4250.firebaseapp.com",
+      databaseURL: "https://dtproject-d4250.firebaseio.com",
+      projectId: "dtproject-d4250",
+      storageBucket: "dtproject-d4250.appspot.com",
+      messagingSenderId: "80901270533",
+      appId: "1:80901270533:web:b5810934a24554565f006c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+    </script>
+
+    <h1>Homework Helper</h1>
+    <input type = "text" placeholder = "name" id = "nameField">
+    <button onclick = "writeData()">Submit</button>
+
+  </body>
+</html>
