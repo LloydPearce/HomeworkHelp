@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <title>Homepage</title>
     <link rel="stylesheet" href="homepage.css">
+
+    <!-- W3 Schools CSS Link -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
 
@@ -26,6 +29,7 @@
 
   <div class = "row">
     <div class = "enterArea col">
+      <!-- Enter Tasks Area -->
       <div class = "text">
         <h1>Enter a Task</h1>
         <input type = "text" placeholder = "Task Name" id = "nameField">
@@ -33,6 +37,21 @@
         <input type = "text" placeholder = "Due Date(m/d/y)" id = "dateField">
         <br>
         <button onclick = "writeData()">Create</button>
+      </div>
+
+      <!-- Search Tasks Area -->
+      <div class = "text">
+        <h1>Search for a Task</h1>
+        <!-- W3 Schools Search Bar -->
+        <div class="search-container">
+          <input class = "search" type="text" placeholder="Search.." name="search">
+          <button onclick = "searchTask()" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <!-- Search Results Here -->
+        <h3>Results</h3>
+        <div class = "searchResult">
+
+        </div>
       </div>
     </div>
 

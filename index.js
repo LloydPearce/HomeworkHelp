@@ -11,7 +11,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Global Variables
 var tasks = [];
+
 //Writing data into arrays
 function writeData(){
   //Saving data into the array
@@ -57,6 +59,24 @@ function deleteData(index){
 
 }
 
+function searchTask(){
+  var searchTerm = document.querySelector(".search").value;
+  searchTerm = searchTerm.toLowerCase();
+
+
+
+  for(var i = 0; i < tasks.length; i++){
+    var task = tasks[i];
+    //If the name of the task (in lower case) contains the search term
+    //We print it into results section
+    if(task[0].toLowerCase().includes(searchTerm)){
+      document.querySelector(".searchResult").innerHTML += "<h3>" + task[0] +  "<br>Due On " + task[1] +"</h3>";
+    }
+  }
+
+  //Printing results in the results section
+
+}
 
 // Login Section
 
