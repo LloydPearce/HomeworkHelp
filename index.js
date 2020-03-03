@@ -12,32 +12,39 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var tasks = [];
-var index = 0;
-//Writing data into Database
+//Writing data into arrays
 function writeData(){
-    //taskNumber = task + number
-    var address = "/students/stu1/task" + index + "/";
-    index++;
-     //Creating a new task object within database
+  //Saving data into the array
+  var taskName = document.getElementById('nameField').value;
+  var taskDate = document.getElementById('dateField').value;
+  var newTask = [taskName, taskDate];
+  tasks.push(newTask);
 
-    var taskName = document.getElementById('nameField').value;
-    var taskDate = document.getElementById('dateField').value;
+  //index of the newest task
+  var index = tasks.length - 1;
 
+  //Creating the Div of the task
+  var div = document.createElement("div");
 
+  //Editing the inner part of the Div
+  div.innerHTML = "<h3>Task Name : " + taskName + " Task Date : " + taskDate +"</h3>" + "<button id = " + index +" onclick = 'deleteData(this.id)'>Delete</button>";
+
+  //Giving the Div a class name
+  var className = "task" + index;
+  div.classList.add(className);
+
+  //Printing the array into the HTML website
+  document.querySelector(".displayArea").appendChild(div);
 }
-// document.querySelector(".displayArea").innerHTML += "<h3>Task Name : " + taskName + " Task Date : " + taskDate +"</h3>" + "<button id = " + k +" onclick = 'deleteData(this.id)'>Delete</button>";
 
+function deleteData(index){
+  //Removing value from the array
+  tasks.splice(index,1);
+  //Creating the div name to be deleted
+  var dName = ".task"+index;
+  var e = document.querySelector(dName);
+  e.parentNode.removeChild(e);
 
-function deleteData(divID){
-  var divNum = divID.split("task").pop();
-  console.log(divNum);
-
-  var delAddress = "/students/stu1/task"+divNum+"/";
-
-  var addressRef = database.ref(delAddress);
-  addressRef.remove();
-
-  window.location.reload();
 }
 
 
