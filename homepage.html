@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+
+  <body>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">About</a>
+    <a href="#" class="w3-bar-item w3-button">FAQ</a>
+    <a href="#" class="w3-bar-item w3-button">Help</a>
+  </div>
+
+  <!-- Page Content -->
+  <div class="w3-blue">
+    <button class="w3-button w3-blue w3-xlarge" onclick="w3_open()">☰</button>
+  </div>
+
+  <div class = "row">
+    <div class = "enterArea col">
+      <div class = "text">
+        <h1>Enter a Task</h1>
+        <input type = "text" placeholder = "Task Name" id = "nameField">
+        <br>
+        <input type = "text" placeholder = "Task Date" id = "dateField">
+        <br>
+        <button onclick = "writeData()">Create</button>
+      </div>
+    </div>
+
+
+    <div class = "displayArea col"><h1>Your Tasks</h1></div>
+  </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
