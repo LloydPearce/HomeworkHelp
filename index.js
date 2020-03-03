@@ -23,15 +23,25 @@ function writeData(){
   //index of the newest task
   var index = tasks.length - 1;
 
+  //Getting the Date assigned
+  var dateAssigned = new Date();
+
+  var dd = String(dateAssigned.getDate()).padStart(2, '0');
+  var mm = String(dateAssigned.getMonth() + 1).padStart(2, '0');
+  var yyyy = dateAssigned.getFullYear();
+
+  dateAssigned = mm + '/' + dd + '/' + yyyy;
+
+
   //Creating the Div of the task
-  var div = document.createElement("div");
+    var div = document.createElement("div");
 
-  //Editing the inner part of the Div
-  div.innerHTML = "<h3>Task Name : " + taskName + " Task Date : " + taskDate +"</h3>" + "<button id = " + index +" onclick = 'deleteData(this.id)'>Delete</button>";
+    //Editing the inner part of the Div
+    div.innerHTML = "<h3>" + taskName + "<br>Assigned on " + dateAssigned + "<br>Due On " + taskDate +"</h3>" + "<button id = " + index +" onclick = 'deleteData(this.id)'>Delete</button>";
 
-  //Giving the Div a class name
-  var className = "task" + index;
-  div.classList.add(className);
+    //Giving the Div a class name
+    var className = "task" + index;
+    div.classList.add(className);
 
   //Printing the array into the HTML website
   document.querySelector(".displayArea").appendChild(div);
