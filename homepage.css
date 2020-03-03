@@ -18,10 +18,18 @@ h1{
   padding-bottom: 30px;
 }
 
-.col{
-  float: left;
-  width: 50vw;
+.row {
+  display: flex;
 }
+
+.col {
+  flex: 50%;
+}
+
+/* .col{
+  float: left;
+  width: 50%;
+} */
 
 .enterArea{
   background-color: #78d4ff;
