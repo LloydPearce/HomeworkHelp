@@ -39,11 +39,14 @@ function writeData(){
     var div = document.createElement("div");
 
     //Editing the inner part of the Div
-    div.innerHTML = "<h3>" + taskName + "<br>Assigned on " + dateAssigned + "<br>Due On " + taskDate +"</h3>" + "<button id = " + index +" onclick = 'deleteData(this.id)'>Delete</button>";
+    div.innerHTML = taskName + "<br>Assigned on " + dateAssigned + "<br>Due On " + taskDate + "<br>" + "<button id = " + index +" onclick = 'deleteData(this.id)'>Delete</button>";
 
     //Giving the Div a class name
     var className = "task" + index;
+    var className2 = "task";
     div.classList.add(className);
+    div.classList.add(className2);
+
 
   //Printing the array into the HTML website
   document.querySelector(".displayArea").appendChild(div);
