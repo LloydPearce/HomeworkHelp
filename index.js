@@ -63,6 +63,8 @@ function searchTask(){
   var searchTerm = document.querySelector(".search").value;
   searchTerm = searchTerm.toLowerCase();
 
+  //Clearing the innerHTML of the display area to prevent reprinting
+  document.querySelector(".searchResult").innerHTML = "";
 
 
   for(var i = 0; i < tasks.length; i++){

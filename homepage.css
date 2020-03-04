@@ -20,10 +20,12 @@ h1{
 
 .row {
   display: flex;
+  height: 100vh;
 }
 
 .col {
   flex: 50%;
+  height: 100vh;
 }
 
 /* .col{
@@ -33,14 +35,14 @@ h1{
 
 .enterArea{
   background-color: #78d4ff;
-  height: 100vh;
+  height: 100%;
   width: 50vw;
   text-align: center;
 }
 
 .displayArea{
   background-color: #52c8ff;
-  height: 100vh;
+  height: 100%;
   width: 50vw;
   text-align: center;
 }
