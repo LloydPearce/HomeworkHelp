@@ -7,20 +7,13 @@
     <link rel="stylesheet" href="homepage.css">
 
     <!-- W3 Schools CSS Link -->
+
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
 
   <body>
-
-  <!-- Sidebar -->
-  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button">About</a>
-    <a href="#" class="w3-bar-item w3-button">FAQ</a>
-    <a href="#" class="w3-bar-item w3-button">Help</a>
-  </div>
 
   <!-- Page Content -->
 
@@ -32,25 +25,27 @@
     HomeworkHelper
   </div>
 
-  <!-- Imported CSS -->
+  <!-- Imported SideBar -->
   <div class="sidenav">
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#clients">Clients</a>
     <a href="#contact">Contact</a>
   </div>
-  <!-- End of Imported CSS -->
+  <!-- End of Imported SideBar -->
 
   <div class = "row">
     <div class = "enterArea col">
       <!-- Enter Tasks Area -->
       <div class = "enterTasks text">
         <h1>Enter a Task</h1>
+        <h3 style = "margin-bottom: 5px;">Enter the Task Name</h3>
         <input type = "text" placeholder = "Task Name" id = "nameField">
         <br>
+        <h3 style = "margin-bottom: 4px; margin-top: 5px;">Enter the Due Date</h3>
         <input type = "text" placeholder = "Due Date(m/d/y)" id = "dateField">
         <br>
-        <button onclick = "writeData()">Create</button>
+        <button class = "button" onclick = "writeData()">Create</button>
       </div>
 
       <!-- Search Tasks Area -->
